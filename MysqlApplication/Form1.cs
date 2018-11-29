@@ -73,14 +73,14 @@ namespace MysqlApplication
                 command.Parameters.AddWithValue("@nev", nev);
                 command.Parameters.AddWithValue("@jelszo", jelszo);
                 command.Parameters.AddWithValue("@regdatum", szuldat);
-                int erintett_sorok_szama = command.ExecuteNonQuery();
-                
+                int sorok = command.ExecuteNonQuery();
+
             }
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            list_box.Clear();
+            list_box.ClearSelected();
             string nev = NevTextBox.Text;
             string jelszo = JelszoTextBox.Text;
             DateTime szuldat = DateTimeTicker.Value;
@@ -98,7 +98,7 @@ namespace MysqlApplication
                 var darab = (long)ellenorzes.ExecuteScalar();
                 if (darab == 0)
                 {
-                    MessageBox.Show("Rossz user nevet vagy jelszót adtál meg");
+                    MessageBox.Show("Rossz felhasználó nevet vagyj elszót adtál meg!");
                     return;
                 }
 
@@ -188,7 +188,7 @@ namespace MysqlApplication
                 command.Parameters.AddWithValue("@regdatum", szuldat);
 
                 command.Parameters.AddWithValue("@id", id);
-                int erintett_sorok_szama = command.ExecuteNonQuery();
+                int sorok = command.ExecuteNonQuery();
 
 
                 Kiiratas();
@@ -232,7 +232,7 @@ namespace MysqlApplication
                 command.Parameters.AddWithValue("@regdatum", szuldat);
 
                 command.Parameters.AddWithValue("@id", id);
-                int erintett_sorok_szama = command.ExecuteNonQuery();
+                int sorok = command.ExecuteNonQuery();
                 Kiiratas();
                 
             }
