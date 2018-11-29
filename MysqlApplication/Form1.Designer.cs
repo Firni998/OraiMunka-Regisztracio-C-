@@ -33,6 +33,11 @@
             this.DateTimeTicker = new System.Windows.Forms.DateTimePicker();
             this.Reg_Button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
+            this.list_box = new System.Windows.Forms.ListBox();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NevTextBox
@@ -59,7 +64,7 @@
             // 
             // Reg_Button
             // 
-            this.Reg_Button.Location = new System.Drawing.Point(163, 103);
+            this.Reg_Button.Location = new System.Drawing.Point(94, 103);
             this.Reg_Button.Name = "Reg_Button";
             this.Reg_Button.Size = new System.Drawing.Size(75, 23);
             this.Reg_Button.TabIndex = 3;
@@ -76,11 +81,63 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Regisztráció";
             // 
+            // btn_logout
+            // 
+            this.btn_logout.Location = new System.Drawing.Point(94, 161);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(75, 23);
+            this.btn_logout.TabIndex = 5;
+            this.btn_logout.Text = "Kilépés";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            // 
+            // btn_login
+            // 
+            this.btn_login.Location = new System.Drawing.Point(94, 132);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(75, 23);
+            this.btn_login.TabIndex = 6;
+            this.btn_login.Text = "Belépés";
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            // 
+            // list_box
+            // 
+            this.list_box.FormattingEnabled = true;
+            this.list_box.Location = new System.Drawing.Point(50, 190);
+            this.list_box.Name = "list_box";
+            this.list_box.Size = new System.Drawing.Size(174, 121);
+            this.list_box.TabIndex = 7;
+            // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(50, 317);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.TabIndex = 8;
+            this.btn_update.Text = "Frissités";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(149, 317);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 9;
+            this.btn_delete.Text = "Törlés";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 396);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.list_box);
+            this.Controls.Add(this.btn_login);
+            this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Reg_Button);
             this.Controls.Add(this.DateTimeTicker);
@@ -100,6 +157,11 @@
         private System.Windows.Forms.DateTimePicker DateTimeTicker;
         private System.Windows.Forms.Button Reg_Button;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.ListBox list_box;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_delete;
     }
 }
 
