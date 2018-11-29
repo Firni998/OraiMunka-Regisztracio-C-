@@ -73,7 +73,7 @@ namespace MysqlApplication
                 command.Parameters.AddWithValue("@nev", nev);
                 command.Parameters.AddWithValue("@jelszo", jelszo);
                 command.Parameters.AddWithValue("@regdatum", szuldat);
-                int sorok = command.ExecuteNonQuery();
+                int sorok_szama = command.ExecuteNonQuery();
 
             }
         }
@@ -188,7 +188,7 @@ namespace MysqlApplication
                 command.Parameters.AddWithValue("@regdatum", szuldat);
 
                 command.Parameters.AddWithValue("@id", id);
-                int sorok = command.ExecuteNonQuery();
+                int sorok_szama = command.ExecuteNonQuery();
 
 
                 Kiiratas();
@@ -232,7 +232,7 @@ namespace MysqlApplication
                 command.Parameters.AddWithValue("@regdatum", szuldat);
 
                 command.Parameters.AddWithValue("@id", id);
-                int sorok = command.ExecuteNonQuery();
+                int sorok_szama = command.ExecuteNonQuery();
                 Kiiratas();
                 
             }
